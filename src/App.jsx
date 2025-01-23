@@ -1,21 +1,21 @@
-import { useState } from "react";
+import Component1 from "./components/Component1";
+import Component2 from "./components/Component2";
+import { ContextData } from "./Context";
+
+import FileUploadWithPreview from "./components/FileUploadWithPreview";
 
 const App = () => {
-  const sectionStyle = {
-    color: "red",
-    padding: "10px",
-    border: "1px solid black",
-    textAlign: "center", // Corrected property
-  };
-
-  const [count, setCount] = useState(0);
   return (
     <>
-      <section style={sectionStyle}>
-        {count}
-        <button onClick={() => setCount(count + 1)}>+</button>
-        <button onClick={() => setCount(count > 0 ? count - 1 : 0)}>-</button>
-      </section>
+      <main>
+        {/* <ContextData.Provider
+          value={{ name: "Hiesenberg", profession: "Chemist", age: 50 }}
+        >
+          <Component1 />
+          <Component2 />
+        </ContextData.Provider> */}
+        <FileUploadWithPreview />
+      </main>
     </>
   );
 };
